@@ -26,8 +26,12 @@ public class UsuarioDAO {
 	}
 	
 	
-	public void save(Usuario usuario) {
+	public void save(String email, String senha) {
+		Usuario usuario = new Usuario();
+		usuario.setLogin(email);
+		usuario.setSenha(senha);
 		usuarios.put(usuario.getLogin(), usuario);
+		System.out.println(email);
 	}
 	
 	
